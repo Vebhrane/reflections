@@ -1,0 +1,66 @@
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+As a record of the path one takes for the creation of a file. By looking behind, one can see the path one took to arrive at a goal. Looking backwards, one can see where one's efficiency could be sharpened or streamlined.
+
+Commits - 
+A historical save action
+One Commit/Logical Change
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+Saving automatically may end up with incomplete code fragments or sentances, where as just getting into a "One Commit/Logical Change" is a good rule of thumb to carry forward. Con: one may forget to Commit on a regular basis however probably not for long.
+
+Repository
+Multiple files that are related
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+Because of the interconnectivity between certain types of files, like HTML and CSS files, XML, JavaScript, etc. but also documents, spreadsheets, etc. This allows for Repository wide editing of single items once and saved everywhere.
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log is easy - it just gives you the IDs of the versions and a blurb. git diff isn't working for me just yet...
+
+Git Errors and Warnings Solution
+Should not be doing an octopus
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened)
+This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+How might using version control make you more confident to make changes that could break something?
+
+One can always revert back (or look back) to diagnose the issue. One can also be more assured that you can't break anything inavdertly while experimenting in code.
+
+Git Checkout - to access previous or different versions of the same file - only the ID's change.
+Git Diff - highlights the differences between two different files.
+Git Log - gives one a log of all commits\ID versions of the same file.
+cd - change directory
+mv - move file(s)
+subl - an alias for launching Sublime Text 3 in Git Bash
+Git Clone - replicate an entire Git Repository, including history
+
+• Compare two commits, printing each line that is present in one commit but not the other.
+
+git diff will do this. It takes two arguments - the two commit ids to compare. 
+
+
+• Make a copy of an entire Git repository, including the history, onto your own computer.
+
+git clone will do this. It takes one argument - the url of the repository to copy. 
+
+
+• Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+git checkout will do this. It takes one argument - the commit ID to restore. 
+
+
+• Show the commits made in this repository, starting with the most recent.
+
+git log will do this. It doesn't take any arguments.
+
+
+
