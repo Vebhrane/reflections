@@ -1,0 +1,112 @@
+• What happens when you initialize a repository? Why do you need to do it?
+When initialized, the folder now has a hidden folder called .git, where all the git loveliness is kept. The files that were in the folder perior to initializing git are still there and are now tied into the new repository, Reflections. Git work can now be relflected there.
+
+• git init
+• git add
+• git status
+• staging area
+• working directory
+
+• How is the staging area different from the working directory and the repository? What value do you think it offers?
+It acts as a temporary holding area for files that will be placed into the repository, then acted upon using committs. The working directory a folder of possible files to be placed into the repository. The value lies with having to actually git add files into the repository, from the available files in the working directory, making a decision to do so or not. I am assuming that files added to the staging area can be removed prior to making a commit... perhaps afterwards as well. I guess I'll see.
+
+• Udacity Git Commit Message Style Guide
+Introduction
+This style guide acts as the official guide to follow in your projects. Udacity evaluators will use this guide to grade your projects. There are many opinions on the "ideal" style in the world of development. Therefore, in order to reduce the confusion on what style students should follow during the course of their projects, we urge all students to refer to this style guide for their projects.
+
+Commit Messages
+Message Structure
+A commit messages consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer. The layout looks like this:
+
+type: subject
+
+body
+
+footer
+The title consists of the type of the message and subject.
+
+The Type
+The type is contained within the title and can be one of these types:
+
+feat: a new feature
+fix: a bug fix
+docs: changes to documentation
+style: formatting, missing semi colons, etc; no code change
+refactor: refactoring production code
+test: adding tests, refactoring test; no production code change
+chore: updating build tasks, package manager configs, etc; no production code change
+The Subject
+Subjects should be no greater than 50 characters, should begin with a capital letter and do not end with a period.
+
+Use an imperative tone to describe what a commit does, rather than what it did. For example, use change; not changed or changes.
+
+The Body
+Not all commits are complex enough to warrant a body, therefore it is optional and only used when a commit requires a bit of explanation and context. Use the body to explain the what and why of a commit, not the how.
+
+When writing a body, the blank line between the title and the body is required and you should limit the length of each line to no more than 72 characters.
+
+The Footer
+The footer is optional and is used to reference issue tracker IDs.
+
+Example Commit Message
+feat: Summarize changes in around 50 characters or less
+
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like `log`, `shortlog`
+and `rebase` can get confused if you run the two together.
+
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequenses of this
+change? Here's the place to explain them.
+
+Further paragraphs come after blank lines.
+
+ - Bullet points are okay, too
+
+ - Typically a hyphen or asterisk is used for the bullet, preceded
+   by a single space, with blank lines in between, but conventions
+   vary here
+
+If you use an issue tracker, put references to them at the bottom,
+like this:
+
+Resolves: #123
+See also: #456, #789
+
+• How can you use the staging area to make sure you have one commit per logical change?
+The staging area only is for files that you want to update at a certain time, like after a logical change. So it makes sense that all of the files used during that one logical change are added to the staging area until committed.
+
+• What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Wholescale, wide divergence from the whole. Exploratory shifts. Different versions. Grow a branch from the main, while keeping the main intact and functional.
+
+• How do the diagrams help you visualize the branch structure?
+Child to parent is more evident as are unreachable branches. Being able to create a new branch on the fly is good.
+
+• git checkout -b new_branch-name - creates a new branch while checking out at the same time.
+like: git branch new_branch_name and git checkout new_branch_name at the same time.
+
+Combining braches into a main branch: git merge master coins (Coins being a branch of Master...)
+• git show (ID) shows Diff info for ID and its parent (back in the branch)
+• git branch -d coins - removes the "Coins" branch name... the branch commits having been merged into the laster. -d for delete.
+
+• What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+The result is obvious as the next step following through with the creation of a file, recipe, document, etc. Because it shows the progress of the idea as a flow or timeline of datapoints.
+
+• gliffy - https://www.gliffy.com - Online Diagramming App
+• yUML Beta - http://yuml.me/diagram/activity/draw - another diagramming rig.
+
+Now that you’ve learned when Git will not be able to automatically merge branches, and what happens when it can’t, go add the following question and your thoughts on it to your reflections file:
+
+• What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Automatic merging can be problematic if there are conflicts in two different versions of the same file. Git allows for user input to manually make the hard decisions instead of blindly going forward.
+
+
+
+
+
+
+
